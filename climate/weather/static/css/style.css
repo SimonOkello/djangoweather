@@ -1,0 +1,71 @@
+/*BODY*/
+body {
+    background-color: #cfcfd8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*CONTAINER*/
+.container {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+}
+/*UNORDERED LISTS */
+ul {
+  margin: o;
+  padding: 0;
+}
+/*HEADER*/
+header {
+  background-color: aquamarine;
+  min-height: 50px;
+  border-radius: 10px;
+  padding-top: 20px;
+  border-bottom: #0000ff 3px solid;
+}
+header nav {
+  float: left;
+  margin-top: 10px;
+}
+header a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #000000;
+}
+header li {
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+/*END HEADER*/
+
+/*BUTTON */
+.btn {
+  background-color: #0000ff;
+  color: #000000;
+  width: 50px;
+  height: 30px;
+}
+.form {
+}
+/*WEATHER DISPLAY WINDOW */
+.display {
+  border: #75757a 1px solid;
+  width: 50%;
+  margin: auto;
+  height: 150px;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+figure {
+  float: left;
+}
+
+/*RESPONSIVE
+@media (max-width: 900px){
+    figure{
+        float: left;
+    }
+    header nav {
+        margin-top: 5px;
+      }
+}*/
