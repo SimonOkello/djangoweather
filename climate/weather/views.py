@@ -29,6 +29,6 @@ def index(request):
             'icon': r['weather'][0]['icon'],
         }
 
-        weather_data.append(city_weather)
+        weather_data.append(city_weather) #Append the ocity weather to  data list
 
     return render(request, 'index.html', {'weather_data': weather_data, 'form': form})

@@ -15,6 +15,7 @@
           <ul>
             <li><a href="{% url 'index' %}">Home</a></li>
             <li><a href="#">Tomorrow's Weather</a></li>
+            <li><a href="#">Delete City</a></li>
           </ul>
         </nav>
       </header>
@@ -26,32 +27,34 @@
           <input type="submit" class="btn" value="Add">
       </form>
       </div>
-      <div>
+      
           {% if weather_data %}
           {% for city_weather in weather_data %}
-<ul>
-    <li><span>{{city_weather.city}}</span></li>
-</ul>
-          {% endfor %}
-          {% else %}
-          <p>No Cities are Available yet</p>
-          {% endif %}
-      </div>
       <article>
           <div class="display">
           <figure>
-              <img src="{% static 'images/1.png' %}" height="50" width="50" alt="" srcset="">
+            <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="Image" >
           </figure>
-          <p>
-              <span>{{city_weather.city}}</span><br>
-              <span>{{city_weather.temperature}} ° C </span><br>
-              <span>{{city_weather.description}}/span>
+          
+              <h3>{{city_weather.city}}</h3></<h3><br>
+              <h5>{{city_weather.temperature}} ° C </h5></<h5><br>
+              <p>{{city_weather.description}}</p>
 
-          </p>
+          
           
 
       </div>
     </article>
+    {% endfor %}
+          {% else %}
+          <p>No City to display the Current Weather. Please add the city first!</p>
+          {% endif %}
+    </div>
+    &nbsp;
+    <div class="container">
+    <footer>
+      Simon Okello &copy;2020. All rights reserved.
+    </footer>
     </div>
   </body>
 </html>

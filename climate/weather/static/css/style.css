@@ -48,25 +48,33 @@ header li {
   border-radius: 5px;
 
 }
-.form {
-}
+
 /*WEATHER DISPLAY WINDOW */
 .display {
   border: #75757a 1px solid;
   width: 50%;
   margin: auto;
-  height: 150px;
+  height: 200px;
   margin-top: 50px;
   border-radius: 5px;
 }
-figure {
+figure img{
   float: left;
+  margin-left: 0;
 }
 input[type = 'text']{
   margin: auto;
   padding: 12px 20px;
   width: 50%;
   border-radius: 5px;
+}
+footer{
+  background-color: aquamarine;
+  min-height: 50px;
+  border-radius: 10px;
+  padding-top: 50px;
+  /* border-bottom: #0000ff 3px solid; */
+  width: 100%;
 }
 /*RESPONSIVE
 @media (max-width: 900px){
