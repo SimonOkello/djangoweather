@@ -1,6 +1,6 @@
 /*BODY*/
 body {
-    background-color: #cfcfd8;
+    background-color: #616164;
   font-family: Arial, Helvetica, sans-serif;
 }
 /*CONTAINER*/
@@ -46,6 +46,7 @@ header li {
   margin: 8px 0;
   padding: 12px 20px;
   border-radius: 5px;
+  border: #0000ff 1px solid;
 
 }
 
@@ -55,8 +56,10 @@ header li {
   width: 50%;
   margin: auto;
   height: 200px;
-  margin-top: 50px;
-  border-radius: 5px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color:#ffffff;
+  border: #0000ff 2px solid;
 }
 figure img{
   float: left;
