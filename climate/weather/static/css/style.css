@@ -41,9 +41,12 @@ header li {
 /*BUTTON */
 .btn {
   background-color: #0000ff;
-  color: #000000;
-  width: 50px;
-  height: 30px;
+  color: #ffffff;
+  width: 80px;
+  margin: 8px 0;
+  padding: 12px 20px;
+  border-radius: 5px;
+
 }
 .form {
 }
@@ -59,7 +62,12 @@ header li {
 figure {
   float: left;
 }
-
+input[type = 'text']{
+  margin: auto;
+  padding: 12px 20px;
+  width: 50%;
+  border-radius: 5px;
+}
 /*RESPONSIVE
 @media (max-width: 900px){
     figure{

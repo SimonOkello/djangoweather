@@ -21,16 +21,16 @@
       <h1>Know Your Weather Today</h1>
       <div class="form">
       <form action="" method="post">
-          {% csrf_token%}
-          <input type="text" name="city" placeholder="Enter the city">
+          {% csrf_token %}
+          {{form.name}}
           <input type="submit" class="btn" value="Add">
       </form>
       </div>
       <div>
-          {% if cities%}
-          {% for city in cities %}
+          {% if weather_data %}
+          {% for city_weather in weather_data %}
 <ul>
-    <li><span>{{city.name}}</span></li>
+    <li><span>{{city_weather.city}}</span></li>
 </ul>
           {% endfor %}
           {% else %}
@@ -43,9 +43,9 @@
               <img src="{% static 'images/1.png' %}" height="50" width="50" alt="" srcset="">
           </figure>
           <p>
-              <span>Nairobi</span><br>
-              <span>25 F </span><br>
-              <span>Very Cold</span>
+              <span>{{city_weather.city}}</span><br>
+              <span>{{city_weather.temperature}} ° C </span><br>
+              <span>{{city_weather.description}}/span>
 
           </p>
           
