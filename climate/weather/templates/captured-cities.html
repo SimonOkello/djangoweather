@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="#">Tomorrow's Weather</a></li>
+            <li><a href="{% url 'citylist' %}">See Captured Cities</a></li>
+            <li><a href="#">Delete City</a></li>
+          </ul>
+        </nav>
+      </header>
+      <h1 style="color: #ffffff;">Know Your Weather Today</h1>
+      <div class="form">
+        <form action="" method="post">
+          {% csrf_token %} 
+          {{cityform.name}}
+          <input type="submit" class="btn" value="Add" />
+        </form>
+      </div>
+
+      {% if cities_list %} {% for city in cities_list %}
+      <article>
+        <div>
+          <ul style="color: #ffffff;">
+            <li>{{city.name}}</li>
+          </ul>
+        </div>
+      </article>
+      {% endfor %} {% else %}
+      <p>You have not added a City. Please add the city first!</p>
+      {% endif %}
+    </div>
+    &nbsp;
+    <div class="container">
+      <footer>
+        Simon Okello &copy;2020. All rights reserved.
+      </footer>
+    </div>
+  </body>
+</html>
